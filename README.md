@@ -1,4 +1,7 @@
 # ultitv
+
+<img width="509" alt="UltiTV" src="https://user-images.githubusercontent.com/1061632/221005826-b5fc28c2-f55c-408d-9970-0a3aea65dd8c.png">
+
 ULTI.TV is the Ultimate Frisbee Entertainment TV Network. Its mission is to showcase the sport of Ultimate Frisbee 🥏 to people all around the world in an equitable, fair and diverse way. ULTI.TV produces free to watch LIVE Games on their YouTube and short documentaries about culture in the sport. 
 
 We are a group of freelancers all around the world with a couple of part time people in Europe, UK and Australia. Most of us played the sport ourselves and are really passionate about it. 
