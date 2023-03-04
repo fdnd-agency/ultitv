@@ -26,9 +26,8 @@ We'd like to see the front end of the application be rebuilt in a technology of 
 
 Watch a walkthrough of the CommentarySource.com system
 
-<video width="320" height="240" controls>
-<source src="https://commentarysource2.blob.core.windows.net/videos/CommentarySourceWalkthrough.mp4" type="video/mp4">
-</video>
+![]("https://commentarysource2.blob.core.windows.net/videos/CommentarySourceWalkthrough.mp4")
+
 
 ## Resources
 
