@@ -10,7 +10,9 @@ Ultimate Frisbee is a team sport which is played in three divisions, Men, Women�
 
 We make constant efforts in making the sport more entertaining to watch. This is partly bettering the production but also with more storytelling about the players. One of our products is called Commentary Source and it’s a tool for players and coaches to fill in their information about themselves and their team.
 
+<img src="https://www.commentarysource.com/images/commentary-source-logo.svg" width="300" alt="Commentary Source">
 Commentary Source is then used by commentators — the people telling the story live during the game — to see the information while the game is on. It’s also a tool to keep and see game statistics.
+
 
 ## Reason for the project
 We want to take the project to the next level with young pioneering students. We want to get a new perspective on what we have built. But also, a lot of what we do is voluntary work, 99% of the players play as amateurs, there’s no big sponsors yet so we’re also pioneering. So this means we have little budgets to work with, most of the time there’s no budget.
