@@ -17,12 +17,17 @@ Commentary Source is then used by commentators — the people telling the story 
 ## Reason for the project
 We want to take the project to the next level with young pioneering students. We want to get a new perspective on what we have built. But also, a lot of what we do is voluntary work, 99% of the players play as amateurs, there’s no big sponsors yet so we’re also pioneering. So this means we have little budgets to work with, most of the time there’s no budget.
 
-But we manage to livestream more than 30 events a year and produce hundreds of videos for our YouTube channel. We have been doing this for 13 years and we’re not slowing down. 
+But we manage to livestream more than 30 events a year and produce hundreds of videos for our [YouTube channel](https://www.youtube.com/user/ultidottv). We have been doing this for 13 years and we’re not slowing down. 
 
 ## The assignment
-What we want is a better front end experience for players and coaches filling in information (in the form of forms), editing information (with an account) and using the information (in a dashboard) as commentators.
+The app that the commentary team use to see all the information they need for the game, is currently written in Aurelia. This was a reasonably good framework in it's day but as now fallen out of support and no longer receives updates. As a result we'd love to get it rebuilt. We also haven't had any external input into the development of the project and new design ideas are long overdue. 
 
-Currently the information is stored on a per event basis, but we want to make this on a player basis for a full year. Players will enrich the data about themselves for a whole year, they can easily show which teams (club or national, mixed or open/women’s) they will play for this year. Because most players play for a club and a national team (beach, indoor or grass).
+We'd like to see the front end of the application be rebuilt in a technology of your choice (we have a slight preference towards [Svelte](https://svelte.dev/) (because it's amazing)).
+
+Watch a walkthrough of the CommentarySource.com system
+<video width="320" height="240" controls>
+<source src="https://commentarysource2.blob.core.windows.net/videos/CommentarySourceWalkthrough.mp4" type="video/mp4">
+</video>
 
 ## Resources
 
