@@ -25,6 +25,7 @@ The app that the commentary team use to see all the information they need for th
 We'd like to see the front end of the application be rebuilt in a technology of your choice (we have a slight preference towards [Svelte](https://svelte.dev/) (because it's amazing)).
 
 Watch a walkthrough of the CommentarySource.com system
+
 <video width="320" height="240" controls>
 <source src="https://commentarysource2.blob.core.windows.net/videos/CommentarySourceWalkthrough.mp4" type="video/mp4">
 </video>
