@@ -33,6 +33,10 @@ We'd like to see the front end of the application be rebuilt in a technology of 
 
 [REST API UltiTV]()
 
-[Styleguide]()
+[Styleguide]
+
+[Website UltiTV](https://ulti.tv)
+
+[Videoplatform UltiTV](https://www.youtube.com/user/ultidottv)
 
 
