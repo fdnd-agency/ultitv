@@ -31,6 +31,8 @@ We'd like to see the front end of the application be rebuilt in a technology of 
 
 [Backlog](https://github.com/orgs/fdnd-agency/projects/13)
 
+[Sprintplanning miro board](https://miro.com/app/board/uXjVPhWkx8o=/?share_link_id=195631044941)
+
 [REST API Commentary Tool](https://github.com/fdnd-agency/ultitv/tree/main/api)
 
 [Styleguide]
