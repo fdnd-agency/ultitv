@@ -35,7 +35,7 @@ We'd like to see the front end of the application be rebuilt in a technology of 
 
 [REST API Commentary Tool](https://github.com/fdnd-agency/ultitv/tree/main/api)
 
-[Styleguide]
+[Styleguide UPDATED🥏](https://www.figma.com/file/Hucnxf4qT3nr2HzaiNaERX/Ultiversal-Branding?node-id=3471%3A5&t=fDGK435K3YiPnMRU-1)
 
 [Website UltiTV](https://ulti.tv)
 
