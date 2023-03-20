@@ -33,7 +33,9 @@ We'd like to see the front end of the application be rebuilt in a technology of 
 
 [Sprintplanning miro board](https://miro.com/app/board/uXjVPhWkx8o=/?share_link_id=195631044941)
 
-[REST API Commentary Tool](https://github.com/fdnd-agency/ultitv/tree/main/api)
+[Statische JSON Commentary Tool](https://github.com/fdnd-agency/ultitv/tree/main/api)
+
+[REST API](https://api.ultitv.fdnd.nl)
 
 [Styleguide UPDATED🥏](https://www.figma.com/file/Hucnxf4qT3nr2HzaiNaERX/Ultiversal-Branding?node-id=3471%3A5&t=fDGK435K3YiPnMRU-1)
 
