@@ -53,6 +53,32 @@
 	</li>
 </ul>
 
+<h3>POST</h3>
+<p>Voeg een nieuwe Player toe, met meerdere vragen en antwoorden</p>
+
+<p>De volgende structuur is vereist:</p>
+
+<pre><code>&lbrace;
+	"name": "Jantine",
+	"gender":"v",
+	"jerseyNumber": "2",
+	"answers":[
+		&lbrace;
+				"content": "23", 
+				"questionId":"clfe55h2r2guf0buubb5gjecs"
+		&lbrace;,
+		&lbrace;
+				"content": "Djanteen",
+				"questionId":"clfe51w5y2hu30bvza52t50uz"
+		&lbrace;
+		]
+&rbrace;</code></pre>
+
+<ul><li>
+  <a href="/api/v1/players">/api/v1/players</a>
+</li></ul>
+
+
 <style>
 	h4,
 	ul {

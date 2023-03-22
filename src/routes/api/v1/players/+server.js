@@ -26,10 +26,10 @@ function queryGetPlayers() {
           name
         }
         answers {
+          content
           question {
             title
           }
-          content
         }
       }
       playersConnection {
@@ -51,6 +51,7 @@ export async function POST({ request }) {
   if (!requestData.name || typeof requestData.name !== 'string') {
     errors.push({ field: 'name', message: 'name should exist and have a string value' })
   }
+
   if (!requestData.answers || typeof requestData.answers !== 'object') {
     errors.push({ field: 'answers', message: 'answers should exist and have a string value' })
   }
