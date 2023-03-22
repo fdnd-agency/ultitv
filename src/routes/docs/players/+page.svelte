@@ -54,7 +54,8 @@
 </ul>
 
 <h3>POST</h3>
-<p>Voeg een nieuwe Player toe, met meerdere vragen en antwoorden</p>
+<p>Voeg een nieuwe Player toe, met meerdere Answers, die ieder gekoppeld zijn aan Question (via de id van de Question)</p>
+<p>Haal hier alle Questions met bijbehorende id's op: /api/v1/question</p>
 
 <p>De volgende structuur is vereist:</p>
 
