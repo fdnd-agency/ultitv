@@ -33,7 +33,7 @@ We'd like to see the front end of the application be rebuilt in a technology of 
 
 [Sprintplanning miro board](https://miro.com/app/board/uXjVPhWkx8o=/?share_link_id=195631044941)
 
-[Statische JSON Commentary Tool](https://github.com/fdnd-agency/ultitv/tree/main/api)
+[Statische JSON Commentary Tool](https://github.com/fdnd-agency/ultitv/tree/main/ultitv-api)
 
 [REST API](https://api.ultitv.fdnd.nl)
 
