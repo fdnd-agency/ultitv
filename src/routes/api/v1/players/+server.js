@@ -22,6 +22,14 @@ function queryGetPlayers() {
         name
         gender
         jerseyNumber
+        image {
+          height
+          width
+          original: url
+          small: url(transformation: { image: { resize: { width: 500, fit: clip } } })
+          originalAsWebP: url(transformation: { document: { output: { format: webp } } })
+          smallAsWebP: url(transformation: { image: { resize: { width: 500, fit: clip } } document: { output: { format: webp } } })
+        }
         team {
           name
         }
