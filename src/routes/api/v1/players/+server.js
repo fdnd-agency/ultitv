@@ -103,7 +103,7 @@ export async function POST({ request }) {
       publishPlayer(where: { id: $id }, to: PUBLISHED) {
         id
       }
-      publishManyAnswersConnection(from: DRAFT, to: PUBLISHED) {
+      publishManyAnswersConnection(to: PUBLISHED, from: DRAFT) {
         edges {
           node {
             id
