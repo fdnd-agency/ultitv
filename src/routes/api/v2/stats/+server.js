@@ -23,7 +23,43 @@ function queryGetStats(id){
                         gameId
                     }
                     team1Score
-                    team2Score 
+                    team2Score
+                    point {
+                        turnovers
+                        startedOnOffence {
+                            name
+                        }
+                        startedOnDefence {
+                            name
+                        }
+                        scored {
+                            name
+                        }
+                        team1Score
+                        team2Score
+                        passes {
+                            id
+                        }
+                        blockPlayers {
+                            id
+                        }
+                        turnoverPlayers {
+                            id
+                        }
+                        lastPointInHalf
+                        scoredBy {
+                            id
+                        }
+                        assistBy {
+                            id
+                        }
+                        team1Class
+                        team1OorD
+                        team1Turnovers
+                        team2Class
+                        team2OorD
+                        team2Turnovers
+                    } 
                 }
             }
         `
@@ -37,7 +73,43 @@ function queryGetStats(id){
                         gameId
                     }
                     team1Score
-                    team2Score 
+                    team2Score
+                    point {
+                        turnovers
+                        startedOnOffence {
+                            name
+                        }
+                        startedOnDefence {
+                            name
+                        }
+                        scored {
+                            name
+                        }
+                        team1Score
+                        team2Score
+                        passes {
+                            id
+                        }
+                        blockPlayers {
+                            id
+                        }
+                        turnoverPlayers {
+                            id
+                        }
+                        lastPointInHalf
+                        scoredBy {
+                            id
+                        }
+                        assistBy {
+                            id
+                        }
+                        team1Class
+                        team1OorD
+                        team1Turnovers
+                        team2Class
+                        team2OorD
+                        team2Turnovers
+                    }
                 }
             }
         `
