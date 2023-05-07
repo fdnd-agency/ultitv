@@ -5,10 +5,12 @@ import { responseInit } from '$lib/server/responseInit'
 export async function GET({ url }) {
     const first = Number(url.searchParams.get('first') ?? 5)
     const skip = Number(url.searchParams.get('skip') ?? 0)
+    const direction = url.searchParams.get('direction') === 'ASC' ? 'ASC' : 'DESC'
+    const orderBy = (url.searchParams.get('orderBy') ?? 'publishedAt') + '_' + direction
     // Question type
     const type = url.searchParams.get('type') || null
     const query = queryGetQuestions(type)
-    const data = await hygraphOnSteroids.request(query, { first, skip, type })
+    const data = await hygraphOnSteroids.request(query, { first, skip, type, orderBy })
     
     return new Response(JSON.stringify(data), responseInit)
 }
@@ -18,8 +20,8 @@ function queryGetQuestions(type){
     // If type is not null, return questions with type
     if (type !== null) {
         return gql`
-            query getQuestions($first: Int, $skip: Int, $type: QuestionType){
-                questions(first: $first, skip: $skip, where: { type: $type }){
+            query getQuestions($first: Int, $skip: Int, $type: QuestionType, $orderBy: QuestionOrderByInput){
+                questions(first: $first, skip: $skip, where: { type: $type }, orderBy: $orderBy){
                     title
                     type
                 }
@@ -29,8 +31,8 @@ function queryGetQuestions(type){
     // If type is null, return all questions
     else{
         return gql`
-            query getQuestions($first: Int, $skip: Int){
-                questions(first: $first, skip: $skip){
+            query getQuestions($first: Int, $skip: Int, $orderBy: QuestionOrderByInput){
+                questions(first: $first, skip: $skip, orderBy: $orderBy){
                     title
                     type
                 }

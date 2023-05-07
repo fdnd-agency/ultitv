@@ -21,6 +21,15 @@
     <li>
         <strong>type</strong>, het type van de te selecteren <em>questions</em>.
     </li>
+	<li>
+		<strong>direction</strong>, bepaalt de volgorde van de selectie. Standaard is DESC (aflopend)
+		maar je kunt deze parameter ASC (oplopend) meegeven om de richting te veranderen.
+	</li>
+	<li>
+		<strong>orderBy</strong>, bepaalt de sortering van de selectie. Standaard is
+		<em>publishedAt</em>, de datum dat het record is toegevoegd. Alle eigenschappen van
+		<em>questions</em> kunnen gebruikt worden als sortering.
+	</li>
 </ul>
 
 <h4>Voorbeeld Requests:</h4>
@@ -37,6 +46,9 @@
 	</li>
     <li>
         <a href="/api/v2/questions?type=Player">/api/v2/questions?type=Player</a>, selecteer <em>questions</em> op basis van type Player.
+    </li>
+	<li>
+        <a href="/api/v2/questions?orderBy=title&direction=ASC">/api/v2/questions?orderBy=title&direction=ASC</a>, sorteer <em>questions</em> op basis van title.
     </li>
 </ul>
 

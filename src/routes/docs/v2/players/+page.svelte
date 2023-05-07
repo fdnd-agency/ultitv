@@ -21,6 +21,15 @@
     <li>
         <strong>id</strong>, het id van de te selecteren <em>player</em>.
     </li>
+	<li>
+		<strong>direction</strong>, bepaalt de volgorde van de selectie. Standaard is DESC (aflopend)
+		maar je kunt deze parameter ASC (oplopend) meegeven om de richting te veranderen.
+	</li>
+	<li>
+		<strong>orderBy</strong>, bepaalt de sortering van de selectie. Standaard is
+		<em>publishedAt</em>, de datum dat het record is toegevoegd. Alle eigenschappen van
+		<em>players</em> kunnen gebruikt worden als sortering.
+	</li>
 </ul>
 
 <h4>Voorbeeld Requests:</h4>
@@ -37,6 +46,9 @@
 	</li>
     <li>
         <a href="/api/v2/players?id=clgqvwtra1dss0bw9b3c40iqv">/api/v2/players?id=clgqvwtra1dss0bw9b3c40iqv</a>, selecteer <em>player</em> op basis van id.
+    </li>
+	<li>
+        <a href="/api/v2/players?orderBy=jerseyNumber&direction=ASC">/api/v2/players?orderBy=jerseyNumber&direction=ASC</a>, sorteer <em>player</em> op basis van jerseyNumber.
     </li>
 </ul>
 

@@ -21,6 +21,15 @@
     <li>
         <strong>id</strong>, het id van het te selecteren <em>team</em>.
     </li>
+	<li>
+		<strong>direction</strong>, bepaalt de volgorde van de selectie. Standaard is DESC (aflopend)
+		maar je kunt deze parameter ASC (oplopend) meegeven om de richting te veranderen.
+	</li>
+	<li>
+		<strong>orderBy</strong>, bepaalt de sortering van de selectie. Standaard is
+		<em>publishedAt</em>, de datum dat het record is toegevoegd. Alle eigenschappen van
+		<em>teams</em> kunnen gebruikt worden als sortering.
+	</li>
 </ul>
 
 <h4>Voorbeeld Requests:</h4>
@@ -37,6 +46,9 @@
 	</li>
     <li>
         <a href="/api/v2/teams?id=clgqvvl3t1doq0bw9ig7aqct5">/api/v2/teams?id=clgqvvl3t1doq0bw9ig7aqct5</a>, selecteer <em>teams</em> op basis van id.
+    </li>
+	<li>
+        <a href="/api/v2/teams?orderBy=name&direction=ASC">/api/v2/teams?orderBy=name&direction=ASC</a>, sorteer <em>teams</em> op basis van naam.
     </li>
 </ul>
 
