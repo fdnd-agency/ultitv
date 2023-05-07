@@ -67,3 +67,38 @@ function queryGetPlayers(id){
         `
     }
 }
+
+export async function POST({ request }) {
+    const requestData = await request.json()
+
+    console.log(requestData)
+
+    // Mutation query for adding a player
+    const mutation = gql`
+        mutation createPlayer(
+            $name: String!, 
+            $jerseyNumber: Int!, 
+            $gender: Gender, 
+            $height: Int, 
+            $pronounced: String, 
+            $pronouns: String, 
+            $team: TeamWhereUniqueInput!
+        ){
+            createPlayer(
+                data: {
+                    name: $name
+                    jerseyNumber: $jerseyNumber
+                    height: $height
+                    pronounced: $pronounced
+                    pronouns: $pronouns
+                    gender: $gender
+                    team: {
+                        connect: {
+                            id: $team
+                        }
+                    }
+                }
+            )
+        }
+    `
+}
