@@ -1,4 +1,4 @@
-import { hygraphOnSteroids } from '$lib/server/hygraph'
+import { hygraph, hygraphOnSteroids } from '$lib/server/hygraph'
 import { gql } from 'graphql-request'
 import { responseInit } from '$lib/server/responseInit'
 
@@ -110,7 +110,8 @@ export async function POST({ request }){
     `
 
     // Execute mutation
-    const data = await hygraph.request(mutation, {...requestData})
+    const data = await hygraph
+        .request(mutation, {...requestData})
         .then((data) => {
             return (
                 // Execute publication
