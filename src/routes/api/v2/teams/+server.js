@@ -84,7 +84,7 @@ export async function POST({ request }){
 
     // Mutation query for adding team
     const mutation = gql`
-        mutation createTeam($name: String!, $country: String!, $seeding: Int!, iso2: String, iso3: String, olympicCode: String){
+        mutation createTeam($name: String!, $country: String!, $seeding: Int!, $iso2: String, $iso3: String, $olympicCode: String){
             createTeam(
                 data: {
                     name: $name
