@@ -82,6 +82,28 @@ export async function POST({ request }){
     const requestData = await request.json()
     const errors = []
 
+    // Check request data
+    if (!requestData.name || typeof requestData.name !== 'string') {
+        errors.push({ field: 'name', message: 'name should exist and have a string value' })
+    }
+
+    if (!requestData.country || typeof requestData.country !== 'string') {
+        errors.push({ field: 'country', message: 'country should exist and have a string value' })
+    }
+
+    if (!requestData.seeding || typeof requestData.seeding !== 'number') {
+        errors.push({ field: 'seeding', message: 'seeding should exist and have a number value' })
+    }
+
+    if (errors.length > 0){
+        return new Response(
+            JSON.stringify({
+                errors: errors,
+            }),
+            { status: 400 }
+        )
+    }
+
     // Mutation query for adding team
     const mutation = gql`
         mutation createTeam($name: String!, $country: String!, $seeding: Int!, $iso2: String, $iso3: String, $olympicCode: String){
