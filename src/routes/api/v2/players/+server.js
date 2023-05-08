@@ -101,4 +101,52 @@ export async function POST({ request }) {
             )
         }
     `
+
+    // Mutation for publication
+    const publication = gql`
+        mutation publishPlayer($id: ID!){
+            publishPlayer(where: { id: $id }, to: PUBLISHED){
+                id
+            }
+            publishTeam(to: PUBLISHED, from: DRAFT){
+                id
+            }
+        }
+    `
+
+    // Execute mutation
+    const data = await hygraph
+        .request(mutation, {...requestData})
+        .then((data) => {
+            return (
+                // Execute publication
+                hygraph.request(publication, { id: data.createPlayer.id ?? null })
+                // Catch error if publication fails
+                .catch((error) => {
+                    error.push({ field: 'HyGraph', message: error})
+                })
+            )
+        })
+        // Catch error if mutation fails
+        .catch((error) => {
+            error.push({ field: 'HyGraph', message: error})
+        })
+    
+    // Check error length
+    if (errors.length > 0) {
+        return new Response(
+            JSON.stringify({ 
+                errors: errors, 
+            }),
+            { status: 400}
+        )
+    }
+
+    return new Response(
+        JSON.stringify({
+            data: data && data.publishPlayer,
+        }),
+        responseInit
+    )
 }
+
