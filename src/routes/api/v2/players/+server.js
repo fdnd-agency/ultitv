@@ -76,15 +76,7 @@ export async function POST({ request }) {
 
     // Mutation query for adding a player
     const mutation = gql`
-        mutation createPlayer(
-            $name: String!, 
-            $jerseyNumber: Int!, 
-            $gender: Gender, 
-            $height: Int, 
-            $pronounced: String, 
-            $pronouns: String, 
-            $team: TeamWhereUniqueInput!
-        ){
+        mutation createPlayer($name: String!, $jerseyNumber: Int!, $gender: Gender, $height: Int, $pronounced: String, $pronouns: String, $team: ID!){
             createPlayer(
                 data: {
                     name: $name
@@ -99,7 +91,9 @@ export async function POST({ request }) {
                         }
                     }
                 }
-            )
+            ){
+                id
+            }
         }
     `
 
