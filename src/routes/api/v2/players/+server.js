@@ -72,7 +72,23 @@ export async function POST({ request }) {
     const requestData = await request.json()
     const errors = []
 
-    console.log(requestData)
+    // Check request data
+    if (!requestData.name || typeof requestData.name !== 'string') {
+        errors.push({ field: 'name', message: 'name should exist and have a string value' })
+    }
+
+    if (!requestData.jerseyNumber || typeof requestData.jerseyNumber !== 'number') {
+        errors.push({ field: 'jerseyNumber', message: 'jerseyNumber should exist and have a number value' })
+    }
+
+    if (errors.length > 0){
+        return new Response(
+            JSON.stringify({
+                errors: errors,
+            }),
+            { status: 400 }
+        )
+    }
 
     // Mutation query for adding a player
     const mutation = gql`
@@ -102,6 +118,13 @@ export async function POST({ request }) {
         mutation publishPlayer($id: ID!){
             publishPlayer(where: { id: $id }, to: PUBLISHED){
                 id
+            }
+            publishManyTeamsConnection(to: PUBLISHED){
+                edges{
+                    node{
+                        id
+                    }
+                }
             }
         }
     `
