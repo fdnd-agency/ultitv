@@ -140,13 +140,13 @@ export async function POST({ request }){
                 hygraph.request(publication, { id: data.createTeam.id ?? null })
                 // Catch error if publication fails
                 .catch((error) => {
-                    error.push({ field: 'HyGraph', message: error})
+                    errors.push({ field: 'HyGraph', message: error})
                 })
             )
         })
         // Catch error if mutation fails
         .catch((error) => {
-            error.push({ field: 'HyGraph', message: error})
+            errors.push({ field: 'HyGraph', message: error})
         })
     
     // Check error length

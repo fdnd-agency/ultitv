@@ -1,4 +1,4 @@
-import { hygraphOnSteroids } from '$lib/server/hygraph'
+import { hygraph, hygraphOnSteroids } from '$lib/server/hygraph'
 import { gql } from 'graphql-request'
 import { responseInit } from '$lib/server/responseInit'
 
@@ -70,6 +70,7 @@ function queryGetPlayers(id){
 
 export async function POST({ request }) {
     const requestData = await request.json()
+    const errors = []
 
     console.log(requestData)
 
@@ -108,9 +109,6 @@ export async function POST({ request }) {
             publishPlayer(where: { id: $id }, to: PUBLISHED){
                 id
             }
-            publishTeam(to: PUBLISHED, from: DRAFT){
-                id
-            }
         }
     `
 
@@ -123,13 +121,13 @@ export async function POST({ request }) {
                 hygraph.request(publication, { id: data.createPlayer.id ?? null })
                 // Catch error if publication fails
                 .catch((error) => {
-                    error.push({ field: 'HyGraph', message: error})
+                    errors.push({ field: 'HyGraph', message: error})
                 })
             )
         })
         // Catch error if mutation fails
         .catch((error) => {
-            error.push({ field: 'HyGraph', message: error})
+            errors.push({ field: 'HyGraph', message: error})
         })
     
     // Check error length
