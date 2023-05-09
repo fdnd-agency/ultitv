@@ -3,7 +3,8 @@
 
 	const data = {
 		Players: {
-			GET: '/docs/v2/players#get'
+			GET: '/docs/v2/players#get',
+			POST: '/docs/v2/players#post'
 		},
 		Teams: {
 			GET: '/docs/v2/teams#get'

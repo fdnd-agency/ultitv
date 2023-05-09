@@ -22,6 +22,7 @@ function queryGetQuestions(type){
         return gql`
             query getQuestions($first: Int, $skip: Int, $type: QuestionType, $orderBy: QuestionOrderByInput){
                 questions(first: $first, skip: $skip, where: { type: $type }, orderBy: $orderBy){
+                    id
                     title
                     type
                 }
@@ -33,6 +34,7 @@ function queryGetQuestions(type){
         return gql`
             query getQuestions($first: Int, $skip: Int, $orderBy: QuestionOrderByInput){
                 questions(first: $first, skip: $skip, orderBy: $orderBy){
+                    id
                     title
                     type
                 }

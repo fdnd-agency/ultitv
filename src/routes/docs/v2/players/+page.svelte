@@ -52,6 +52,26 @@
     </li>
 </ul>
 
+<h3>POST</h3>
+<p>Voeg een nieuwe Player toe die gekoppeld is aan Team (via de id van het Team)</p>
+<p>Haal hier alle Teams met bijbehorende id's op: /api/v2/teams</p>
+
+<p>De volgende structuur is vereist:</p>
+
+<pre><code>&lbrace;
+	"name": "Tim",
+	"jerseyNumber": 2,
+	"height": 186,
+	"pronounced": "Tim",
+	"pronouns": "He/Him",
+	"gender":"Male",
+	"team": "clgr5v9is1tn10bw9hm2lx5xw"
+&rbrace;</code></pre>
+
+<ul><li>
+	<a href="/api/v2/players">/api/v2/players</a>
+</li></ul>
+
 
 <style>
 	h4,
