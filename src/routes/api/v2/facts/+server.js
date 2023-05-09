@@ -48,19 +48,19 @@ export async function POST({ request }){
 
     // Mutation for adding fact
     const mutation = gql`
-        mutation createFact($answer: String!, $questionID: ID!, $playerID: ID){
+        mutation createFact($answer: String!, $question: ID!, $player: ID){
             createFact(
                 data: {
                     answer: $answer,
                     question: {
                         connect: {
-                            id: $questionID
+                            id: $question
                         }
                     }
                     reference: {
                         connect: {
                             Player: {
-                                id: $playerID
+                                id: $player
                             }
                         }
                     }

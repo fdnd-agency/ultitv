@@ -7,10 +7,16 @@
 			POST: '/docs/v2/players#post'
 		},
 		Teams: {
-			GET: '/docs/v2/teams#get'
+			GET: '/docs/v2/teams#get',
+			POST: '/docs/v2/teams#post'
 		},
 		Questions: {
-			GET: '/docs/v2/questions#get'
+			GET: '/docs/v2/questions#get',
+			POST: '/docs/v2/questions#post'
+		},
+		Facts: {
+			GET: '/docs/v2/facts#get',
+			POST: '/docs/v2/facts#post'
 		},
 		Games: {
 			GET: '/docs/v2/games#get'
