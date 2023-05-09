@@ -48,7 +48,7 @@ export async function POST({ request }){
 
     // Mutation for adding fact
     const mutation = gql`
-        mutation createFact($answer: String!, $question: ID!, $player: ID){
+        mutation createFact($answer: String!, $question: ID!, $reference: ID){
             createFact(
                 data: {
                     answer: $answer,
@@ -56,11 +56,11 @@ export async function POST({ request }){
                         connect: {
                             id: $question
                         }
-                    }
+                    },
                     reference: {
                         connect: {
                             Player: {
-                                id: $player
+                                id: $reference
                             }
                         }
                     }
@@ -72,12 +72,12 @@ export async function POST({ request }){
     `
 
     // Mutation for publication
-    const publishFact = gql`
+    const publication = gql`
         mutation publishFact($id: ID!){
             publishFact(where: { id: $id }, to: PUBLISHED){
                 id
             }
-            publishManyFactsConnection(to: PUBLISHED){
+            publishManyPlayersConnection(to: PUBLISHED){
                 edges{
                     node{
                         id

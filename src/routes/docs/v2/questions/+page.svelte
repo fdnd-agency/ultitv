@@ -52,6 +52,20 @@
     </li>
 </ul>
 
+<h3>POST</h3>
+<p>Voeg een nieuwe Question toe</p>
+
+<p>De volgende structuur is vereist:</p>
+
+<pre><code>&lbrace;
+	"title": "What do you like most about Ultimate?",
+	"type": "Player",
+&rbrace;</code></pre>
+
+<ul><li>
+	<a href="/api/v2/questions">/api/v2/questions</a>
+</li></ul>
+
 
 <style>
 	h4,

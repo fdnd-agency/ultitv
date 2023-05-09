@@ -52,6 +52,24 @@
     </li>
 </ul>
 
+<h3>POST</h3>
+<p>Voeg een nieuw Team toe</p>
+
+<p>De volgende structuur is vereist:</p>
+
+<pre><code>&lbrace;
+	"name": "Lakers",
+	"country": "Netherlands",
+	"seeding": 3,
+	"iso2": "NL",
+	"iso3": "NLD",
+	"olympicCode":"NED",
+&rbrace;</code></pre>
+
+<ul><li>
+	<a href="/api/v2/teams">/api/v2/teams</a>
+</li></ul>
+
 
 <style>
 	h4,
