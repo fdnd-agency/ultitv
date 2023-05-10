@@ -3,11 +3,11 @@
 
 	const data = {
 		Players: {
-			GET: '/docs/players#get',
-			POST: '/docs/players#post'
+			GET: '/docs/v1/players#get',
+			POST: '/docs/v1/players#post'
 		},
 		Questions: {
-			GET: '/docs/questions#get'
+			GET: '/docs/v1/questions#get'
 			
 		}
 		
