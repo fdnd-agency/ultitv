@@ -1,4 +1,4 @@
-import { hygraph, hygraphOnSteroids } from '$lib/server/hygraph'
+import { hygraph2, hygraphOnSteroids2 } from '$lib/server/hygraph'
 import { gql } from 'graphql-request'
 import { responseInit } from '$lib/server/responseInit'
 
@@ -10,7 +10,7 @@ export async function GET({ url }) {
     // Player id
     const id = url.searchParams.get('id') || null
     const query = queryGetPlayers(id)
-    const data = await hygraphOnSteroids.request(query, { first, skip, id, orderBy })
+    const data = await hygraphOnSteroids2.request(query, { first, skip, id, orderBy })
     
     return new Response(JSON.stringify(data), responseInit)
 }
@@ -130,12 +130,12 @@ export async function POST({ request }) {
     `
 
     // Execute mutation
-    const data = await hygraph
+    const data = await hygraph2
         .request(mutation, {...requestData})
         .then((data) => {
             return (
                 // Execute publication
-                hygraph.request(publication, { id: data.createPlayer.id ?? null })
+                hygraph2.request(publication, { id: data.createPlayer.id ?? null })
                 // Catch error if publication fails
                 .catch((error) => {
                     errors.push({ field: 'HyGraph', message: error})

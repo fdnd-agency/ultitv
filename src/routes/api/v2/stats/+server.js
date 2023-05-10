@@ -1,4 +1,4 @@
-import { hygraphOnSteroids } from '$lib/server/hygraph'
+import { hygraphOnSteroids2 } from '$lib/server/hygraph'
 import { gql } from 'graphql-request'
 import { responseInit } from '$lib/server/responseInit'
 
@@ -8,7 +8,7 @@ export async function GET({ url }) {
     // Game id
     const id = Number(url.searchParams.get('id')) || null
     const query = queryGetStats(id)
-    const data = await hygraphOnSteroids.request(query, { first, skip, id })
+    const data = await hygraphOnSteroids2.request(query, { first, skip, id })
     
     return new Response(JSON.stringify(data), responseInit)
 }
