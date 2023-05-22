@@ -11,7 +11,7 @@ export async function GET({ url }) {
     const id = url.searchParams.get('id') || null
     const query = queryGetPlayers(id)
     const data = await hygraphOnSteroids2.request(query, { first, skip, id, orderBy })
-    
+
     return new Response(JSON.stringify(data), responseInit)
 }
 
@@ -26,6 +26,7 @@ function queryGetPlayers(id){
                     jerseyNumber
                     gender
                     team {
+                        id
                         name
                     }
                     height
@@ -41,7 +42,7 @@ function queryGetPlayers(id){
             }
         `
     }
-    // If id is null, return all players 
+    // If id is null, return all players
     else{
         return gql`
             query getPlayers($first: Int, $skip: Int, $orderBy: PlayerOrderByInput){
@@ -51,6 +52,7 @@ function queryGetPlayers(id){
                     jerseyNumber
                     gender
                     team {
+                        id
                         name
                     }
                     height
@@ -146,12 +148,12 @@ export async function POST({ request }) {
         .catch((error) => {
             errors.push({ field: 'HyGraph', message: error})
         })
-    
+
     // Check error length
     if (errors.length > 0) {
         return new Response(
-            JSON.stringify({ 
-                errors: errors, 
+            JSON.stringify({
+                errors: errors,
             }),
             { status: 400}
         )
@@ -164,4 +166,3 @@ export async function POST({ request }) {
         responseInit
     )
 }
-
