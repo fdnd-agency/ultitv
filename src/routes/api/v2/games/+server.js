@@ -11,7 +11,7 @@ export async function GET({ url }) {
     const id = Number(url.searchParams.get('id')) || null
     const query = queryGetGames(id)
     const data = await hygraphOnSteroids2.request(query, { first, skip, id, orderBy })
-    
+
     return new Response(JSON.stringify(data), responseInit)
 }
 
@@ -27,6 +27,7 @@ function queryGetGames(id){
                     division
                     gameStatus
                     team1 {
+                        id
                         name
                         seeding
                         country
@@ -34,6 +35,7 @@ function queryGetGames(id){
                         iso3
                     }
                     team2 {
+                        id
                         name
                         seeding
                         country
@@ -55,6 +57,7 @@ function queryGetGames(id){
                     division
                     gameStatus
                     team1 {
+                        id
                         name
                         seeding
                         country
@@ -62,6 +65,7 @@ function queryGetGames(id){
                         iso3
                     }
                     team2 {
+                        id
                         name
                         seeding
                         country
@@ -72,5 +76,5 @@ function queryGetGames(id){
             }
         `
     }
-    
+
 }

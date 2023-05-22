@@ -11,7 +11,7 @@ export async function GET({ url }) {
     const id = url.searchParams.get('id') || null
     const query = queryGetTeams(id)
     const data = await hygraphOnSteroids2.request(query, { first, skip, id, orderBy })
-    
+
     return new Response(JSON.stringify(data), responseInit)
 }
 
@@ -29,6 +29,7 @@ function queryGetTeams(id){
                     iso3
                     olympicCode
                     players {
+                        id
                         name
                         jerseyNumber
                         gender
@@ -59,6 +60,7 @@ function queryGetTeams(id){
                     iso3
                     olympicCode
                     players {
+                        id
                         name
                         jerseyNumber
                         gender
@@ -148,12 +150,12 @@ export async function POST({ request }){
         .catch((error) => {
             errors.push({ field: 'HyGraph', message: error})
         })
-    
+
     // Check error length
     if (errors.length > 0) {
         return new Response(
-            JSON.stringify({ 
-                errors: errors, 
+            JSON.stringify({
+                errors: errors,
             }),
             { status: 400}
         )
