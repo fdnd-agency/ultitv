@@ -101,9 +101,11 @@ function queryGetStats(id){
                         lastPointInHalf
                         scoredBy {
                             id
+                            name
                         }
                         assistBy {
                             id
+                            name
                         }
                         team1Class
                         team1OorD
