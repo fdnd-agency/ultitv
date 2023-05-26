@@ -9,7 +9,7 @@ export async function GET({ url }) {
     const id = Number(url.searchParams.get('id')) || null
     const query = queryGetStats(id)
     const data = await hygraphOnSteroids2.request(query, { first, skip, id })
-    
+
     return new Response(JSON.stringify(data), responseInit)
 }
 
@@ -27,31 +27,39 @@ function queryGetStats(id){
                     point {
                         turnovers
                         startedOnOffence {
+                            id
                             name
                         }
                         startedOnDefence {
+                            id
                             name
                         }
                         scored {
-                            name
+                            id
+                            namee
                         }
                         team1Score
                         team2Score
                         passes {
                             id
+                            name
                         }
                         blockPlayers {
                             id
+                            name
                         }
                         turnoverPlayers {
                             id
+                            name
                         }
                         lastPointInHalf
                         scoredBy {
                             id
+                            name
                         }
                         assistBy {
                             id
+                            name
                         }
                         team1Class
                         team1OorD
@@ -59,7 +67,7 @@ function queryGetStats(id){
                         team2Class
                         team2OorD
                         team2Turnovers
-                    } 
+                    }
                 }
             }
         `
@@ -77,31 +85,39 @@ function queryGetStats(id){
                     point {
                         turnovers
                         startedOnOffence {
+                            id
                             name
                         }
                         startedOnDefence {
+                            id
                             name
                         }
                         scored {
+                            id
                             name
                         }
                         team1Score
                         team2Score
                         passes {
                             id
+                            name
                         }
                         blockPlayers {
                             id
+                            name
                         }
                         turnoverPlayers {
                             id
+                            name
                         }
                         lastPointInHalf
                         scoredBy {
                             id
+                            name
                         }
                         assistBy {
                             id
+                            name
                         }
                         team1Class
                         team1OorD
@@ -114,5 +130,5 @@ function queryGetStats(id){
             }
         `
     }
-    
+
 }
