@@ -40,6 +40,30 @@
     </li>
 </ul>
 
+<h3>POST</h3>
+<p>Voeg een nieuw Point toe aan Stats</p>
+
+<p>De volgende structuur is vereist:</p>
+
+<pre><code>&lbrace;
+	"startedOnOffence" : "clgqvvl3t1doq0bw9ig7aqct5", <span>// Team id</span>
+	"startedOnDefence" : "clgr5v9is1tn10bw9hm2lx5xw", <span>// Team id</span>
+	"scored" : "clgqvvl3t1doq0bw9ig7aqct5", <span>// Team id</span>
+	"team1Score" : 4,
+	"team2Score" : 4,
+	"scoredBy" : "clhgs1bbv33wk0aw05juthkgo", <span>// Player id</span>
+	"assistBy" : "clhgs4hwp346t0bw5wg091gqv", <span>// Player id</span>
+	"team1Class" : "hold",
+	"team1OorD" : "O",
+	"team2Class" : "conceded",
+	"team2OorD" : "D",
+	"stat" : "clhgruvjx337r0bw52z76h6ye" <span>// Stat id</span>
+&rbrace;</code></pre>
+
+<ul><li>
+	<a href="/api/v2/teams">/api/v2/stats</a>
+</li></ul>
+
 
 <style>
 	h4,
@@ -52,5 +76,8 @@
 	}
 	li {
 		margin-bottom: 0.4rem;
+	}
+	span{
+		color: rgb(7, 198, 7);
 	}
 </style>

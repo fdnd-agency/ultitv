@@ -55,8 +55,8 @@
 
 <pre><code>&lbrace;
 	"answer": "For fun!",
-    "question": "clgqw2if61cur0bwc7ebvkofr",
-    "reference": "clhao1v92474p0bw1376viwz7"
+    "question": "clgqw2if61cur0bwc7ebvkofr", <span>// Question id</span>
+    "reference": "clhao1v92474p0bw1376viwz7" <span>// Player id</span>
 &rbrace;</code></pre>
 
 <ul><li>
@@ -75,5 +75,8 @@
 	}
 	li {
 		margin-bottom: 0.4rem;
+	}
+	span{
+		color: rgb(7, 198, 7);
 	}
 </style>

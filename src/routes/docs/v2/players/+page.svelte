@@ -65,7 +65,7 @@
 	"pronounced": "Tim",
 	"pronouns": "He/Him",
 	"gender":"Male",
-	"team": "clgr5v9is1tn10bw9hm2lx5xw"
+	"team": "clgr5v9is1tn10bw9hm2lx5xw" <span>// Team id</span>
 &rbrace;</code></pre>
 
 <ul><li>
@@ -84,5 +84,8 @@
 	}
 	li {
 		margin-bottom: 0.4rem;
+	}
+	span{
+		color: rgb(7, 198, 7);
 	}
 </style>

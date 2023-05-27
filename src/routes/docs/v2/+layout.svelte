@@ -22,7 +22,8 @@
 			GET: '/docs/v2/games#get'
 		},
 		Stats: {
-			GET: '/docs/v2/stats#get'
+			GET: '/docs/v2/stats#get',
+			POST: '/docs/v2/stats#post'
 		}
 	};
 </script>
