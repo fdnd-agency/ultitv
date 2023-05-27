@@ -22,8 +22,6 @@ function queryGetStats(id){
                     game {
                         gameId
                     }
-                    team1Score
-                    team2Score
                     point {
                         turnovers
                         startedOnOffence {
@@ -74,8 +72,6 @@ function queryGetStats(id){
                     game {
                         gameId
                     }
-                    team1Score
-                    team2Score
                     point {
                         turnovers
                         startedOnOffence {
