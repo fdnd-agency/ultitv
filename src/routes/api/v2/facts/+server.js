@@ -7,51 +7,36 @@ export async function GET({ url }) {
     const skip = Number(url.searchParams.get('skip') ?? 0)
     const direction = url.searchParams.get('direction') === 'ASC' ? 'ASC' : 'DESC'
     const orderBy = (url.searchParams.get('orderBy') ?? 'publishedAt') + '_' + direction
-    // Question type
-    const type = url.searchParams.get('type') || null
-    const query = queryGetQuestions(type)
-    const data = await hygraphOnSteroids2.request(query, { first, skip, type, orderBy })
+    
+    const query = queryGetFacts()
+    const data = await hygraphOnSteroids2.request(query, { first, skip, orderBy })
     
     return new Response(JSON.stringify(data), responseInit)
 }
 
-function queryGetQuestions(type){
-
-    // If type is not null, return questions with type
-    if (type !== null) {
-        return gql`
-            query getQuestions($first: Int, $skip: Int, $type: QuestionType, $orderBy: QuestionOrderByInput){
-                questions(first: $first, skip: $skip, where: { type: $type }, orderBy: $orderBy){
-                    id
+function queryGetFacts(){
+    return gql`
+        query getFacts($first: Int, $skip: Int, $orderBy: FactOrderByInput){
+            facts(first: $first, skip: $skip, orderBy: $orderBy){
+                id
+                question{
                     title
-                    type
                 }
+                answer
             }
-        `
-    }
-    // If type is null, return all questions
-    else{
-        return gql`
-            query getQuestions($first: Int, $skip: Int, $orderBy: QuestionOrderByInput){
-                questions(first: $first, skip: $skip, orderBy: $orderBy){
-                    id
-                    title
-                    type
-                }
-            }
-        `
-    }
+        }
+    `
 }
 
-export async function POST({ request }) {
+export async function POST({ request }){
     const requestData = await request.json()
     const errors = []
 
     // Check request data
-    if (!requestData.title || typeof requestData.title !== 'string') {
-        errors.push({field: 'title', message: 'title should exist and have a string value'})
+    if (!requestData.answer || typeof requestData.answer !== 'string') {
+        errors.push({ field: 'answer', message: 'answer should exist and have a string value' })
     }
-        
+
     if (errors.length > 0){
         return new Response(
             JSON.stringify({
@@ -61,13 +46,24 @@ export async function POST({ request }) {
         )
     }
 
-    // Mutation query for adding a question
+    // Mutation for adding fact
     const mutation = gql`
-        mutation createQuestion($title: String!, $type: QuestionType){
-            createQuestion(
+        mutation createFact($answer: String!, $question: ID!, $reference: ID){
+            createFact(
                 data: {
-                    title: $title
-                    type: $type
+                    answer: $answer,
+                    question: {
+                        connect: {
+                            id: $question
+                        }
+                    },
+                    reference: {
+                        connect: {
+                            Player: {
+                                id: $reference
+                            }
+                        }
+                    }
                 }
             ){
                 id
@@ -77,9 +73,16 @@ export async function POST({ request }) {
 
     // Mutation for publication
     const publication = gql`
-        mutation publishQuestion($id: ID!){
-            publishQuestion(where: { id: $id }, to: PUBLISHED){
+        mutation publishFact($id: ID!){
+            publishFact(where: { id: $id }, to: PUBLISHED){
                 id
+            }
+            publishManyPlayersConnection(to: PUBLISHED){
+                edges{
+                    node{
+                        id
+                    }
+                }
             }
         }
     `
@@ -90,7 +93,7 @@ export async function POST({ request }) {
         .then((data) => {
             return (
                 // Execute publication
-                hygraph2.request(publication, { id: data.createQuestion.id ?? null })
+                hygraph2.request(publication, { id: data.createFact.id ?? null })
                 // Catch error if publication fails
                 .catch((error) => {
                     errors.push({ field: 'HyGraph', message: error})
@@ -101,7 +104,7 @@ export async function POST({ request }) {
         .catch((error) => {
             errors.push({ field: 'HyGraph', message: error})
         })
-    
+
     // Check error length
     if (errors.length > 0) {
         return new Response(
@@ -114,7 +117,7 @@ export async function POST({ request }) {
 
     return new Response(
         JSON.stringify({
-            data: data && data.publishQuestion,
+            data: data && data.publishFact,
         }),
         responseInit
     )

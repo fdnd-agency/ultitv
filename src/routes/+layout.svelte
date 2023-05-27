@@ -4,7 +4,8 @@
 	const nav = {
 		Menu: {
 			Home: '/',
-			Docs: '/docs'
+			DocsV1: '/docs/v1',
+			DocsV2: '/docs/v2',
 		}
 	};
 </script>
