@@ -61,7 +61,7 @@
 &rbrace;</code></pre>
 
 <ul><li>
-	<a href="/api/v2/teams">/api/v2/stats</a>
+	<a href="/api/v2/stats">/api/v2/stats</a>
 </li></ul>
 
 

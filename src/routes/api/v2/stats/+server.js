@@ -19,6 +19,7 @@ function queryGetStats(id){
         return gql`
             query getStats($first: Int, $skip: Int, $id: Int){
                 stats(first: $first, skip: $skip, where: {game: {gameId: $id}}){
+                    id
                     game {
                         gameId
                     }
@@ -69,6 +70,7 @@ function queryGetStats(id){
         return gql`
             query getStats($first: Int, $skip: Int){
                 stats(first: $first, skip: $skip){
+                    id
                     game {
                         gameId
                     }
