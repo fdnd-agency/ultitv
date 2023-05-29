@@ -3,7 +3,7 @@ import { gql } from 'graphql-request'
 import { responseInit } from '$lib/server/responseInit'
 
 export async function GET({ url }) {
-    const first = Number(url.searchParams.get('first') ?? 5)
+    const first = Number(url.searchParams.get('first') ?? 50)
     const skip = Number(url.searchParams.get('skip') ?? 0)
     // Game id
     const id = Number(url.searchParams.get('id')) || null

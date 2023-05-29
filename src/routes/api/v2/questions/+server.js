@@ -3,7 +3,7 @@ import { gql } from 'graphql-request'
 import { responseInit } from '$lib/server/responseInit'
 
 export async function GET({ url }) {
-    const first = Number(url.searchParams.get('first') ?? 5)
+    const first = Number(url.searchParams.get('first') ?? 50)
     const skip = Number(url.searchParams.get('skip') ?? 0)
     const direction = url.searchParams.get('direction') === 'ASC' ? 'ASC' : 'DESC'
     const orderBy = (url.searchParams.get('orderBy') ?? 'publishedAt') + '_' + direction
@@ -11,7 +11,7 @@ export async function GET({ url }) {
     const type = url.searchParams.get('type') || null
     const query = queryGetQuestions(type)
     const data = await hygraphOnSteroids2.request(query, { first, skip, type, orderBy })
-    
+
     return new Response(JSON.stringify(data), responseInit)
 }
 
@@ -51,7 +51,7 @@ export async function POST({ request }) {
     if (!requestData.title || typeof requestData.title !== 'string') {
         errors.push({field: 'title', message: 'title should exist and have a string value'})
     }
-        
+
     if (errors.length > 0){
         return new Response(
             JSON.stringify({
@@ -101,12 +101,12 @@ export async function POST({ request }) {
         .catch((error) => {
             errors.push({ field: 'HyGraph', message: error})
         })
-    
+
     // Check error length
     if (errors.length > 0) {
         return new Response(
-            JSON.stringify({ 
-                errors: errors, 
+            JSON.stringify({
+                errors: errors,
             }),
             { status: 400}
         )
