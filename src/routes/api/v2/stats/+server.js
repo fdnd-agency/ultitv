@@ -23,7 +23,7 @@ function queryGetStats(id){
                     game {
                         gameId
                     }
-                    point {
+                    point (first: 500){
                         turnovers
                         startedOnOffence {
                             name
@@ -74,7 +74,7 @@ function queryGetStats(id){
                     game {
                         gameId
                     }
-                    point {
+                    point (first: 500){
                         turnovers
                         startedOnOffence {
                             name
