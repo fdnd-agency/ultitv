@@ -1,12 +1,14 @@
 <img width="1030" alt="image" src="https://github.com/fdnd-agency/ultitv/assets/1061632/aae0c9f0-050e-47c5-b28e-038d61cdf3d8">
 
-Interactive Live Donations visualisation for ULTILEAGUE Prize Money
+ULTLEAGUE Donations Prize Money
 
 ## Background:
 ULTILEAGUE is the first mixed-gender Ultimate Frisbee league that prioritises fan engagement and innovation. The league focuses on online fan engagement and seeks to enhance the fan experience during live game streaming by incorporating interactive elements.
 
-## Challenge:
-Create an interactive and visualisation that enables real-time viewing of the prize pot of the prize money for ULTILEAGUE. The goal is to increase fan involvement and excitement during live game broadcasts while transparently showcasing the direct impact of people on the total prize pool.
+## Challenges:
+1. Create an donations section for the ULTILEAGUE website showcasing the impact of people on the total prize pool.
+
+2. Create an interactive and visualisation that enables real-time viewing of the prize pot of the prize money for ULTILEAGUE. The goal is to increase fan involvement and excitement during live game broadcasts while transparently showcasing the direct impact of people on the total prize pool.
 
 ## Key Objectives:
 Real-Time Visualisation: Design a feature that visually displays live donations as they happen during the broadcast but also before and after. This could include a dynamic progress bar, animations, or other creative visual cues that dynamically update based on the incoming donations.
