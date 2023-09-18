@@ -25,7 +25,7 @@ Integration: Ensure compatibility with JSON to for example display live donation
 
 ## Resources
 
-[Backlog](...)
+[Backlog](https://github.com/orgs/fdnd-agency/projects/23/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D)
 
 [Huisstijl]()  
 
