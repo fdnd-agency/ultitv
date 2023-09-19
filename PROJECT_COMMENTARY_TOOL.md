@@ -1,7 +1,5 @@
 ## Commentary Tool (project jaar 2)
 
-
-
 <img src="https://www.commentarysource.com/images/commentary-source-logo.svg" width="300" alt="Commentary Source">
 Commentary Source is then used by commentators — the people telling the story live during the game — to see the information while the game is on. It’s also a tool to keep and see game statistics.
 
@@ -21,11 +19,11 @@ We'd like to see the front end of the application be rebuilt in a technology of 
 
 [Backlog](https://github.com/orgs/fdnd-agency/projects/13/views/1)
 
-[Sprintplanning miro board](https://miro.com/app/board/uXjVPhWkx8o=/?share_link_id=195631044941)
+<1--[Sprintplanning miro board](https://miro.com/app/board/uXjVPhWkx8o=/?share_link_id=195631044941)-->
 
 [Statische JSON Commentary Tool](https://github.com/fdnd-agency/ultitv/tree/main/ultitv-api)
 
-[REST API](https://api.ultitv.fdnd.nl)
+[Hygraph API](https://app.hygraph.com/df971d996f544995bfd94cc7e6e613ff/master/content/5370bc57b98d4f61a9b8760d4289b0bc/view/7a3835d4de064ca19fff892b1e1ddd3d)
 
 [Styleguide UPDATED🥏](https://www.figma.com/file/Hucnxf4qT3nr2HzaiNaERX/Ultiversal-Branding?node-id=3471%3A5&t=fDGK435K3YiPnMRU-1)
 
