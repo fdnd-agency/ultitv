@@ -1,4 +1,4 @@
-## Commentary Tool (project jaar 2)
+## Commentary Tool
 
 <img src="https://www.commentarysource.com/images/commentary-source-logo.svg" width="300" alt="Commentary Source">
 Commentary Source is then used by commentators — the people telling the story live during the game — to see the information while the game is on. It’s also a tool to keep and see game statistics.
