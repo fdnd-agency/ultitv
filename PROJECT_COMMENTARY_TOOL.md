@@ -25,7 +25,7 @@ We'd like to see the front end of the application be rebuilt in a technology of 
 
 [Hygraph API](https://app.hygraph.com/df971d996f544995bfd94cc7e6e613ff/master/content/5370bc57b98d4f61a9b8760d4289b0bc/view/7a3835d4de064ca19fff892b1e1ddd3d)
 
-[Styleguide UPDATED🥏](https://www.figma.com/file/Hucnxf4qT3nr2HzaiNaERX/Ultiversal-Branding?node-id=3471%3A5&t=fDGK435K3YiPnMRU-1)
+[Styleguide UPDATED 🥏](https://www.figma.com/file/Hucnxf4qT3nr2HzaiNaERX/Ultiversal-Branding?node-id=3471%3A5&t=fDGK435K3YiPnMRU-1)
 
 [Website UltiTV](https://ulti.tv)
 
