@@ -19,7 +19,7 @@ We'd like to see the front end of the application be rebuilt in a technology of 
 
 [Backlog](https://github.com/orgs/fdnd-agency/projects/13/views/1)
 
-<1--[Sprintplanning miro board](https://miro.com/app/board/uXjVPhWkx8o=/?share_link_id=195631044941)-->
+<!--[Sprintplanning miro board](https://miro.com/app/board/uXjVPhWkx8o=/?share_link_id=195631044941)-->
 
 [Statische JSON Commentary Tool](https://github.com/fdnd-agency/ultitv/tree/main/ultitv-api)
 
