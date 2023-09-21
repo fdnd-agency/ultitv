@@ -37,3 +37,8 @@ We'd like to see the front end of the application be rebuilt in a technology of 
 
 Tristan, Siem: [Live site](https://ultitv-realtime-webapp.adaptable.app/) | [GitHub repo](https://github.com/Tristandemuijnck/connecting-people-realtime-web-app)  
 Thomas, Sanne, Milan: [Live site](https://rich-gray-barnacle-slip.cyclic.app/) | [GitHub repo](https://github.com/Knetters/performance-matters-optimized-website) 
+
+### Preferred tech stack
+
+Framework: [SvelteKit](https://kit.svelte.dev/)   
+Headless CMS: [Hygraph](https://hygraph.com/)
