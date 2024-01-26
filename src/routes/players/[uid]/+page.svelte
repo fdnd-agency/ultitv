@@ -1,0 +1,1 @@
+<h1>Dynamic player page</h1>

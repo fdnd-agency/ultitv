@@ -1,0 +1,130 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-weight: 100 800;
+	src:
+		url('/fonts/Sora/Sora.woff2') format('woff2'),
+		url('/fonts/Sora/Sora.woff') format('woff'),
+		url('/fonts/Sora/Sora.ttf') format('truetype');
+	font-family: 'Sora';
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 300 700;
+	src:
+		url('/fonts/Quicksand/Quicksand.woff2') format('woff2'),
+		url('/fonts/Quicksand/Quicksand.woff') format('woff'),
+		url('/fonts/Quicksand/Quicksand.ttf') format('truetype');
+	font-family: 'Quicksand';
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 100 900;
+	src:
+		url('/fonts/Inter/Inter.woff2') format('woff2'),
+		url('/fonts/Inter/Inter.woff') format('woff'),
+		url('/fonts/Inter/Inter.ttf') format('truetype');
+	font-family: 'Inter';
+	font-display: swap;
+}
+
+:root {
+	/* COLORS */
+	--background-color: #f4f5fa; 
+	--input-background-color: #ffffff; 
+	--element-background-color: #ffffff; 
+	--primary-font-color: #444d7b; 
+	--button-background-color: #63c6a7; 
+	--button-font-color: #ffffff; 
+	--selected-background-color: #d6dcff; 
+	--hover-background-color: #e7fff7; 
+	--bio-player-font-color: #c3c3c3; 
+	--sub-text-color: #d8d6d6; 
+	--scored-by-color: #18d02b; 
+	--assist-by-color: #2974e4; 
+	--turnover-by-color: #ed4444; 
+	--block-by-color: #ffc738; 
+	
+
+	/* FONTS */
+	--primary-font-family: 'Sora', sans-serif;
+	--secondary-font-family: 'Quicksand', sans-serif;
+	--tertiary-font-family: 'Inter', sans-serif;
+
+	/* BOX SHADOW */
+	--box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+	
+	
+	@supports (color: oklch(100% 0 0)) {
+		--scored-by-color: oklch(74.58% 0.24 143.48); 
+		--assist-by-color: oklch(57.61% 0.185 258.87);
+		--turnover-by-color: oklch(63.35% 0.206 25.28);
+		--block-by-color: oklch(85.72% 0.16 85.68);
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2 {
+	color: var(--primary-font-color);
+	font-weight: 800;
+	font-size: clamp(1rem, 4.2vw, 4rem);
+	font-family: var(--primary-font-family);
+}
+
+h3 {
+	color: var(--primary-font-color);
+	font-weight: 800;
+	font-size: clamp(1rem, 4.2vw, 2rem);
+	font-family: var(--primary-font-family);
+}
+
+.subtitle-large {
+	color: var(--primary-font-color);
+	font-weight: 800;
+	font-size: clamp(0.8rem, 2vw, 3.5rem);
+	font-family: var(--primary-font-family);
+}
+
+.subtitle-medium {
+	margin-bottom: 0.5rem;
+	color: var(--primary-font-color);
+	font-weight: 400;
+	font-size: clamp(0.7rem, 2vw, 3rem);
+	font-family: var(--secondary-font-family);
+}
+
+.subtitle-small {
+	color: var(--primary-font-color);
+	font-weight: 400;
+	font-size: clamp(0.6rem, 1.3vw, 1.125rem);
+	font-family: var(--secondary-font-family);
+}
+
+p {
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.custom-dialog {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: var(--box-shadow);
+	border: none;
+	border-radius: 0.8rem;
+}
+
+dialog::backdrop {
+	backdrop-filter: blur(5px);
+	background-color: rgba(0, 0, 0, 0.4);
+}
