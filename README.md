@@ -1,18 +1,66 @@
-# ultitv
+<h1>
+  <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/luukbrauckmann/fdnd-s14-l1/assets/47314813/8525c7c2-09d4-4089-a1e1-6cf44bfad8fc" alt="ULTI.TV" height="100">
+      <img alt="logo" src="https://github.com/luukbrauckmann/fdnd-s14-l1/assets/47314813/4805fd5e-a5fa-4177-a3d8-8a6977fad32b" alt="ULTI.TV" height="100">
+    </picture>
+</h1>
 
-<img width="509" alt="UltiTV" src="https://user-images.githubusercontent.com/1061632/221005826-b5fc28c2-f55c-408d-9970-0a3aea65dd8c.png">
+<h2 id="contents">📦 Contents</h2>
 
-ULTI.TV is the Ultimate Frisbee Entertainment TV Network. Its mission is to showcase the sport of Ultimate Frisbee 🥏 to people all around the world in an equitable, fair and diverse way. ULTI.TV produces free to watch LIVE Games on their YouTube and short documentaries about culture in the sport. 
+1. [Description](#description)
+2. [Usage](#usage)
+3. [Characteristics](#characteristics)
+4. [Installation](#installation)
+5. [Sources](#sources)
+6. [Licenses](#licenses)
 
-We are a group of freelancers all around the world with a couple of part time people in Europe, UK and Australia. Most of us played the sport ourselves and are really passionate about it. 
+<h2 id="description">ℹ️ Description</h2>
 
-Ultimate Frisbee is a team sport which is played in three divisions, Men, Women’s and Mixed Gender. The mixed gender part makes it unique, as it is the largest mixed gender played team sport in the world. See a video here made by us.  
+Commentary Tool is a website where commentators can commentate on 🥏 matches with a real-time statsboard. Statistics keepers can add/edit stats during a match via a page that is specifcally designed to give the ability to do it as fast as possible. Users in general can sign-up and they can create/edit their player or team profile.
 
-We make constant efforts in making the sport more entertaining to watch. This is partly bettering the production but also with more storytelling about the players. One of our products is called Commentary Source and it’s a tool for players and coaches to fill in their information about themselves and their team.
+<h2 id="usage">🖥️ Usage</h2>
+
+This website is used by the commentators of Ulti.TV. They can add & edit tournaments, matches, teams & players. 
+
+<h2 id="characteristics">✨ Characteristics</h2>
+
+This project is build in Sveltekit. Sveltekit is configured with Vanilla JavaScript & CSS. There is no type checking enabled. Authentication & data is stored in Supabase and is fetched with the REST API and there will be an option to fetch it with GraphQL in the future.
+
+<h2 id="installation">📥 Installation</h2>
+
+Do you want to start this project locally? Then follow the next steps. NB! NodeJS must be installed to run npm commands. In the resources section there is a link to the NodeJS website
+
+1. Open your terminal. Make sure you are in the path of the project.
+```bash
+path_to_the_project/lets-jam-webapplicatie %
+```
+
+3. Before you can start the application you must install all modules.
+```bash
+npm install
+```
+
+3. When the installation is complete you can start the application with the following command.
+```bash
+npm run dev
+
+# Or when you want to open the browser directly with the correct URL.
+npm run dev --open
+```
+4. Make sure to fill in .env with the required database keys & url.
+```env
+PUBLIC_SUPABASE_URL="https://put_unique_url_here.supabase.co"
+PUBLIC_SUPABASE_ANON_KEY="put_anon_key_here"
+```
 
 
-## Projecten
+<h2 id="sources">🌍 Sources</h2>
 
-Jaar 1: [UltiLeague](https://github.com/fdnd-agency/ultitv/blob/main/PROJECT_ULTILEAGUE.md)  
-Jaar 2: [Commentary Tool](https://github.com/fdnd-agency/ultitv/blob/main/PROJECT_COMMENTARY_TOOL.md)  
+- [Instructions (Dutch)](docs/INSTRUCTIONS.md)
+- [Sveltekit](https://kit.svelte.dev/)
+- [Supabase](https://supabase.com/)
+- [Vercel](https://vercel.com/)
 
+<h2 id="licenses">🪪 Licenses</h2>
+
+This project is licensed under the terms of the [MIT license](./LICENSE).

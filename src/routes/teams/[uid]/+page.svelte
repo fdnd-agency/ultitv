@@ -1,0 +1,1 @@
+<h1>Dynamic Team page</h1>
